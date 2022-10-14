@@ -147,6 +147,9 @@ select {
     opacity: 1;
     background: transparent;
     border: none;
+    background: #E2E2E2 0% 0% no-repeat padding-box;
+    border: 2px solid #969696;
+    border-radius: 5px;
     font-weight: 400;
     min-width: 140px;
     padding: 7px 7px;
@@ -158,12 +161,19 @@ select {
     border: none;
     background-color: #F5F5F5;
     margin-right: 30px;
+    padding: 20px 40px;
 }
 
 .cancelButton {
     text-decoration: none;
     text-align: center;
+    padding: 20px 40px;
 }
+
+.resetButton{
+    padding: 20px 40px;
+}
+
 
 @media only screen and (max-width: 600px){
     .form {
