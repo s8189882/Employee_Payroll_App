@@ -68,7 +68,12 @@ class EmployeePayrollData {
     }
 
     set startDate(startDate) {
-        this._startDate = startDate;
+        let futureDate = new Date();
+        futureDate.setDate(futureDate.getDate() + 30);
+        if (startDate < new Date() || startDate < futureDate)
+            this._startDate = startDate;
+        else
+            throw "Start Date is Invalid!";
     }
 
     get notes() {
