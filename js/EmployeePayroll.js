@@ -10,24 +10,34 @@ class EmployeePayrollData {
         this.notes = params[6];
     }
 
+    //getter ans setters
+
+    get id() {
+        return this._id;
+    }
+
+    set id(id) {
+        this._id = id;
+    }
+
     get name() {
         return this._name;
     }
 
     set name(name) {
-        let nameRegex = RegExp('^[A-Z]{1}[a-z]{3,}$');
+        let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
         if (nameRegex.test(name))
             this._name = name;
         else
             throw "Name is Invalid!";
     }
 
-    get profileImage() {
-        return this._profileImage;
+    get profilePic() {
+        return this._profilePic;
     }
 
-    set profileImage(profileImage) {
-        this._profileImage = profileImage;
+    set profilePic(profilePic) {
+        this._profilePic = profilePic;
     }
 
     get gender() {
@@ -88,7 +98,7 @@ class EmployeePayrollData {
     toString() {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         const employeeDate = this.startDate == undefined ? "undefined" : this.startDate.toLocaleDateString("en-us", options);
-        return "Name = " + this.name + ", Profile Image = " + this.profileImage + ", Gender = " + this.gender + ", Department = " + this.department + ", Salary = " + this.salary + ", Start Date = " + employeeDate + ", Notes = " + this.notes;
+        return "Name = " + this.name + ", Profile Image = " + this.profilePic + ", Gender = " + this.gender + ", Department = " + this.department + ", Salary = " + this.salary + ", Start Date = " + employeeDate + ", Notes = " + this.notes;
     }
 }
 
