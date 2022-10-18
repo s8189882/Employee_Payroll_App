@@ -101,6 +101,6 @@ const setTextValue = (id, value) => {
 
 const setValue = (id, value) => {
     const element = document.querySelector(id);
-    element.textContent = value;
+    element.value = value;
 }
 
